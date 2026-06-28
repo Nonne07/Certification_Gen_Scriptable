@@ -20,11 +20,12 @@ const CONFIG = {
     align: 'center'
   },
   date: {
-    x: 600, // Moved back slightly right to 600px
+    x: 625, // Moved back slightly right to 625px
     y: 707, 
     font: '27px Inter, sans-serif',
     color: '#000000',
-    align: 'center'
+    align: 'center',
+    letterSpacing: '1.5px'
   },
   rank: {
     x: 885, // Right after the colon
@@ -312,7 +313,13 @@ function renderToContext(ctx, w, h, data) {
     ctx.font = CONFIG.date.font;
     ctx.fillStyle = CONFIG.date.color;
     ctx.textAlign = CONFIG.date.align;
+    if ('letterSpacing' in ctx && CONFIG.date.letterSpacing) {
+      ctx.letterSpacing = CONFIG.date.letterSpacing;
+    }
     ctx.fillText(data.Date, CONFIG.date.x, CONFIG.date.y);
+    if ('letterSpacing' in ctx && CONFIG.date.letterSpacing) {
+      ctx.letterSpacing = '0px';
+    }
   }
 
   // 4. Rank (after CLASSIFICATION:)
@@ -377,3 +384,5 @@ function downloadCanvas(canvas, filename) {
 document.fonts.ready.then(() => {
   drawSingle();
 });
+
+
