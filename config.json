@@ -1,0 +1,23 @@
+{
+    "__COMMENT_OUTPUT__": "Options for output_preference: 'png', 'pdf', 'both'",
+    "output_preference": "png",
+    "__COMMENT_ZIP__": "Options for zip_output: true, false",
+    "zip_output": true,
+    "default_template": "Template.png",
+    "templates": {
+        "Template.png": [
+            "FUNDAMENTAL OF IC DESIGN AND VERIFICATION",
+            "ADVANCED DESIGN VERIFICATION"
+        ],
+        "PDTemplate.png": [
+            "PHYSICAL DESIGN"
+        ]
+    },
+    "ranks": [
+        "EXCELLENT",
+        "VERY GOOD",
+        "GOOD",
+        "AVERAGE",
+        "PASS"
+    ]
+}
